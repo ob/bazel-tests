@@ -22,5 +22,6 @@ objc_library(
   srcs=['trans.m', 'trans_private.h', 'deep/trans/trans_private_deep.h'],
   hdrs=['trans.h', 'deep/trans/trans_deep.h'],
   include_prefix='trans',
+  enable_modules = True,
   flatten_virtual_headers=True,
 )
