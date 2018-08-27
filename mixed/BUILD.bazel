@@ -1,0 +1,14 @@
+load("@build_bazel_rules_apple//apple:swift.bzl", "swift_library")
+
+swift_library(
+    name = 'mixed_swift',
+    srcs = glob(['mixed-test/*.swift']),
+    deps = [':mixed_objc'],
+)
+
+objc_library(
+    name = 'mixed_objc',
+    srcs = glob(['mixed-test/*.m']),
+    hdrs = glob(['mixed-test/*.h']),
+    enable_modules = 1,
+)
